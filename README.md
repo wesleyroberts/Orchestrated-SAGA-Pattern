@@ -2,8 +2,13 @@
 
 # Orchestrated-SAGA-Pattern
 
-**ARQUITETURA**
-![Logo do Markdown](imagens/SagaOrchestrated.png)
+**Tópicos que iremos abordar**
+- Orchestrated saga parttern
+- transactions
+- Event Driven Architecture
+- spring boot
+- docker
+- kafka
 
 Este repositório tem como objetivo o estudo sobre o padrão SAGA  Orquestrado.
 
@@ -26,7 +31,8 @@ Tudo começa através de microsserviços, que são uma solução arquitetural e 
 
 **Obeservações**
 
-É interessante cada microsserviço possuir seu **próprio banco de dados** (não é obrigatório), porém é uma boa prática, é excelente para o isolamento do serviço, porém, traz o problema para gerenciar as **transações distribuídas**.
+> *É interessante cada microsserviço possuir seu **próprio banco de dados** (não é obrigatório), porém é uma boa prática, é excelente para o isolamento do serviço, porém, traz o problema para gerenciar as **transações distribuídas**.*
+>
 
 Caso a arquitetura **não seja devidamente planejad**a, ou uma trasação distribuída não seja **devidamente tratada,** pode gerar inconsistências de dados.
 
@@ -106,3 +112,41 @@ O próprio serviço deve garantir o próprio rollback e deve garantir que será 
 - Pode ser mais compexo de ser testado devido o conhecimento geral dos microsserviços envolvidos.
 
 ![Saga Orchestrated schema](imagens/Saga%20Choreografy.png)
+
+
+## Saga Execution
+Ambas as implementaçõs do Saga acima utilizam o conceito chamado de **Saga Execution Contorller** ou **SEC**, que é um objeto ou entidade controloadora de execução do saga.
+
+**Observação**
+> Caso estejam **implementando o orquestrado**, o Sec será o próprio orquestrador, ou seja, o serviço como um todo, responsável por enviar e receber eventos com base em seu estado atual.
+
+> caso esteja **implementado o coreografado**, o sec será implementado em cada serviço que faz parte do fluxo do saga, sendo um objeto, uma classe contendo a lógica, ou até um objeto externo, contanto que ele apenas redirecione os eventos, mantendo a lógica de conhecimento da ordem de execução.
+
+![SEC](imagens/SEC.png)
+
+## EDA - Event Driven Architeture
+
+A EDA não possui uma implementação física, ela é um desenho arquitetural,ou seja, você deve implementar sua arquitetura usando o modelo da EDA.
+
+O padrão saga visto anteriormente e o Outbox não são conceitos da EDA, e sim padrões que tratam problemas envolvendo transações distribuídas. Nem todo projeto que utiliza ferramentas de eventos como kafka e RabbitMQ podem ser considerados um EDA, eles precisam estar dentro do modelo arquitetura do EDA.
+
+Menssage Brokers como Apache Kafka e RabbitMQ são ferramentas que contribuem para a implatação desta arquitetura.
+
+
+ 
+
+## kafka [<img src="imagens/kafka.png" width="20"/>](/imagens/kafka.png) 
+
+
+
+Esta ferramenta é uma plataforma de streaming de eventos distribuída, além de ser código aberto, ele pode ser usado para pipelines de dados de alto desempenho, análise de streaming, integração de dados e aplicativos de missão crítica.
+
+Por mais que comparemos ele com o RabbitMQ ele vai além de ser apenas um menssage broker, ele é um ecossitema de streaming de eventos de maneira distribuída.
+
+Ele trabalha com o conceito de **publisher** e **subscriber**, **particionamento**, **grupos de consumo** e etc.
+
+Conceitos dos Kafka
+- **Tópico:** canal de comunicação de eventos, depois de darmosu um nome, os produtores publicam eventos e os consumidores as consomem.
+- **Producer:** responsável por publicar eventos em um ou mais tópicos.
+- **Consumer:** respnsável por consumir evenetos de um ou mais tópicos e processá=los de acordo com a lógica de negócio do sistema.
+- **Consumer group:** conjunto de consumidores que trabalham juntos para consumir eventos de um ou mais tópicos de forma coordenada, permitindo uma maior escalabilidade e tolerância a falhas na leitura de eventos do kafka.
