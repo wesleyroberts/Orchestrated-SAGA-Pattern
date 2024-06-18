@@ -7,3 +7,11 @@ Q
 !orchestrator-service/build.gradle,d/b/db4330904e96ffb633a58e19a7830236f1255be6
 B
 docker-compose.yml,3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a
+€
+Pjava/br/com/microservices/orchestrated/orderservice/OrderServiceApplication.java,4/9/49ac8faad33f5903bed551a690b98492de91fba1
+‘
+asrc/main/java/br/com/microservices/orchestrated/inventoryservice/InventoryServiceApplication.java,c/8/c846ac3e0b0b1cefed59d8f2d4b765647b982eae
+„
+Tjava/br/com/microservices/orchestrated/paymentservice/PaymentServiceApplication.java,f/b/fb894f49f49ec8d20042121855010bd78f329269
+˜
+hjava/br/com/microservices/orchestrated/productvalidationservice/ProductValidationServiceApplication.java,3/3/3301e6b4ab2968932edc875b057979253350d06d
