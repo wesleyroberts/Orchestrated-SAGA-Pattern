@@ -15,3 +15,9 @@ asrc/main/java/br/com/microservices/orchestrated/inventoryservice/InventoryServi
 Tjava/br/com/microservices/orchestrated/paymentservice/PaymentServiceApplication.java,f/b/fb894f49f49ec8d20042121855010bd78f329269
 ˜
 hjava/br/com/microservices/orchestrated/productvalidationservice/ProductValidationServiceApplication.java,3/3/3301e6b4ab2968932edc875b057979253350d06d
+v
+Fjava/br/com/microservices/orchestrated/orchestratorservice/ETopic.java,9/e/9e2ca72d6da0e3bacb3256bc269ea85d222be917
+w
+Gjava/br/com/microservices/orchestrated/orchestratorservice/ETopics.java,8/8/88e9c0aa2a576a127ec18ad97168aced261b6250
+<
+build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
