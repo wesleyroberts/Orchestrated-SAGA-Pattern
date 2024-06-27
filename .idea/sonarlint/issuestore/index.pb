@@ -23,3 +23,17 @@ Njava/br/com/microservices/orchestrated/paymentservice/core/utils/JsonUtil.java
 Zjava/br/com/microservices/orchestrated/orderservice/config/exception/ExceptionDetails.java,f/6/f609f4695c6be6397641be4bd3c59736c9440eeb
 ê
 `java/br/com/microservices/orchestrated/orderservice/config/exception/ExceptionGlobalHandler.java,c/c/cc6bf4618c79db86cd5c5e5572015dc4d8347f4c
+â
+Yjava/br/com/microservices/orchestrated/orderservice/core/kafka/producer/SagaProducer.java,9/c/9ce891c37d73293691f61f9b0425378270176147
+Å
+Qjava/br/com/microservices/orchestrated/orderservice/config/kafka/KafkaConfig.java,a/6/a695fb9e6c21b9edb981f4900d1b33c2be515fbd
+ñ
+fjava/br/com/microservices/orchestrated/productvalidationservice/core/kafka/producer/KafkaProducer.java,7/3/734468401f459d95d66b6cb88bd3ef372a846f19
+å
+\java/br/com/microservices/orchestrated/paymentservice/core/kafka/producer/KafkaProducer.java,2/b/2b7ce75586463e1865e7983c4366c5bba73eaa3a
+ó
+gsrc/main/java/br/com/microservices/orchestrated/inventoryservice/core/kafka/producer/KafkaProducer.java,9/c/9c150c1790c556b8320f4f31336a4e609dd3abc3
+ë
+ajava/br/com/microservices/orchestrated/orchestratorservice/core/kafka/producer/KafkaProducer.java,d/1/d125a1d36eec0995d9c65789ef994ec9fbf585d7
+ú
+ljava/br/com/microservices/orchestrated/orchestratorservice/core/kafka/producer/SagaOrchestratorProducer.java,9/e/9e2c149ee39b9a1119ebbc29c19ebbee4c7640a1
